@@ -7,23 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B912B0D29590088CF64 /* Gotham-Bold.otf */; };
+		42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B952B0D29590088CF64 /* Gotham-Book.otf */; };
+		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
+		42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */; };
+		42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
-		42A34B5E2B0D155A0088CF64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5D2B0D155A0088CF64 /* ViewController.swift */; };
 		42A34B612B0D155A0088CF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B5F2B0D155A0088CF64 /* Main.storyboard */; };
 		42A34B632B0D155B0088CF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B622B0D155B0088CF64 /* Assets.xcassets */; };
 		42A34B662B0D155B0088CF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B642B0D155B0088CF64 /* LaunchScreen.storyboard */; };
+		42A34B6F2B0D17C80088CF64 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 42A34B6E2B0D17C80088CF64 /* Lottie */; };
+		42A34B722B0D18AC0088CF64 /* SplashLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B712B0D18AC0088CF64 /* SplashLottie.json */; };
+		42A34B752B0D193A0088CF64 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B742B0D193A0088CF64 /* Splash.storyboard */; };
+		42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B772B0D19BA0088CF64 /* SplashViewController.swift */; };
+		42A34B7A2B0D1E780088CF64 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B792B0D1E780088CF64 /* Colors.xcassets */; };
+		42A34B7C2B0D1F340088CF64 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B7B2B0D1F340088CF64 /* Auth.storyboard */; };
+		42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B7D2B0D1F660088CF64 /* LoginViewController.swift */; };
+		42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B812B0D1FD80088CF64 /* StoryboardExtension.swift */; };
+		42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B832B0D20050088CF64 /* NSObjectExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42A34B5D2B0D155A0088CF64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42A34B602B0D155A0088CF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42A34B622B0D155B0088CF64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A34B652B0D155B0088CF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A34B672B0D155B0088CF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A34B712B0D18AC0088CF64 /* SplashLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SplashLottie.json; sourceTree = "<group>"; };
+		42A34B742B0D193A0088CF64 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		42A34B772B0D19BA0088CF64 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		42A34B792B0D1E780088CF64 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		42A34B7B2B0D1F340088CF64 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		42A34B7D2B0D1F660088CF64 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		42A34B812B0D1FD80088CF64 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		42A34B832B0D20050088CF64 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		42A34B912B0D29590088CF64 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		42A34B952B0D29590088CF64 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A34B6F2B0D17C80088CF64 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +82,75 @@
 		42A34B582B0D155A0088CF64 /* Codency */ = {
 			isa = PBXGroup;
 			children = (
+				42A34B7F2B0D1FBA0088CF64 /* Helpers */,
 				42A34B592B0D155A0088CF64 /* AppDelegate.swift */,
 				42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */,
-				42A34B5D2B0D155A0088CF64 /* ViewController.swift */,
-				42A34B5F2B0D155A0088CF64 /* Main.storyboard */,
-				42A34B622B0D155B0088CF64 /* Assets.xcassets */,
-				42A34B642B0D155B0088CF64 /* LaunchScreen.storyboard */,
+				42A34B762B0D19410088CF64 /* View Controller */,
+				42A34B732B0D19010088CF64 /* Storyboard */,
 				42A34B672B0D155B0088CF64 /* Info.plist */,
+				42A34B702B0D17CD0088CF64 /* Assets */,
 			);
 			path = Codency;
+			sourceTree = "<group>";
+		};
+		42A34B702B0D17CD0088CF64 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				42A34B852B0D294A0088CF64 /* Font */,
+				42A34B622B0D155B0088CF64 /* Assets.xcassets */,
+				42A34B712B0D18AC0088CF64 /* SplashLottie.json */,
+				42A34B792B0D1E780088CF64 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		42A34B732B0D19010088CF64 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				42A34B5F2B0D155A0088CF64 /* Main.storyboard */,
+				42A34B642B0D155B0088CF64 /* LaunchScreen.storyboard */,
+				42A34B742B0D193A0088CF64 /* Splash.storyboard */,
+				42A34B7B2B0D1F340088CF64 /* Auth.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		42A34B762B0D19410088CF64 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42A34B772B0D19BA0088CF64 /* SplashViewController.swift */,
+				42A34B7D2B0D1F660088CF64 /* LoginViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		42A34B7F2B0D1FBA0088CF64 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				42A34B802B0D1FC20088CF64 /* Extension */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		42A34B802B0D1FC20088CF64 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				42A34B812B0D1FD80088CF64 /* StoryboardExtension.swift */,
+				42A34B832B0D20050088CF64 /* NSObjectExtension.swift */,
+				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		42A34B852B0D294A0088CF64 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */,
+				42A34B912B0D29590088CF64 /* Gotham-Bold.otf */,
+				42A34B952B0D29590088CF64 /* Gotham-Book.otf */,
+				42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +169,9 @@
 			dependencies = (
 			);
 			name = Codency;
+			packageProductDependencies = (
+				42A34B6E2B0D17C80088CF64 /* Lottie */,
+			);
 			productName = Codency;
 			productReference = 42A34B562B0D155A0088CF64 /* Codency.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +200,9 @@
 				Base,
 			);
 			mainGroup = 42A34B4D2B0D155A0088CF64;
+			packageReferences = (
+				42A34B6D2B0D17C80088CF64 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 42A34B572B0D155A0088CF64 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +219,15 @@
 			files = (
 				42A34B662B0D155B0088CF64 /* LaunchScreen.storyboard in Resources */,
 				42A34B632B0D155B0088CF64 /* Assets.xcassets in Resources */,
+				42A34B722B0D18AC0088CF64 /* SplashLottie.json in Resources */,
+				42A34B7A2B0D1E780088CF64 /* Colors.xcassets in Resources */,
+				42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */,
+				42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */,
+				42A34B752B0D193A0088CF64 /* Splash.storyboard in Resources */,
+				42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */,
+				42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */,
 				42A34B612B0D155A0088CF64 /* Main.storyboard in Resources */,
+				42A34B7C2B0D1F340088CF64 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A34B5E2B0D155A0088CF64 /* ViewController.swift in Sources */,
+				42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */,
+				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
+				42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */,
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
+				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
+				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
 				42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +397,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +424,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +460,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42A34B6D2B0D17C80088CF64 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42A34B6E2B0D17C80088CF64 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42A34B6D2B0D17C80088CF64 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42A34B4E2B0D155A0088CF64 /* Project object */;
 }
