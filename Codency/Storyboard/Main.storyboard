@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QoR-BG-Ign">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logout-->
+        <scene sceneID="pHA-bY-v6Y">
+            <objects>
+                <viewController id="77Y-Vt-3fx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CME-oJ-yPR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pyl-65-24C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Logout" image="Logout" id="JvF-KQ-06b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ed0-BO-9sp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1011" y="373"/>
+        </scene>
+        <!--Emergency Alerts-->
+        <scene sceneID="wuf-t6-lL3">
+            <objects>
+                <viewController id="H7S-Xl-aUG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mUe-dt-3Yt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CGx-fT-4gU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Emergency Alerts" image="Notifications" id="xFJ-fk-tfj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saa-fC-dVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="-52"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="FRE-PP-cl1">
+            <objects>
+                <viewController id="nGb-6z-2j3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YBl-c7-fNl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Rrj-3g-u9y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="USc-Ss-k5Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teJ-sA-Ch4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="-661"/>
+        </scene>
+        <!--Tabbar View Controller-->
+        <scene sceneID="q0d-7O-L4M">
+            <objects>
+                <tabBarController storyboardIdentifier="TabbarViewController" id="QoR-BG-Ign" customClass="TabbarViewController" customModule="Codency" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qmx-Ff-yP8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <color key="selectedImageTintColor" name="AppBlack"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nGb-6z-2j3" kind="relationship" relationship="viewControllers" id="6wq-pb-SEU"/>
+                        <segue destination="H7S-Xl-aUG" kind="relationship" relationship="viewControllers" id="koz-qN-WMN"/>
+                        <segue destination="77Y-Vt-3fx" kind="relationship" relationship="viewControllers" id="rts-Hg-F11"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDC-BK-r8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1010" y="-356"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home" width="24" height="24"/>
+        <image name="Logout" width="20" height="20"/>
+        <image name="Notifications" width="18.666666030883789" height="18.666666030883789"/>
+        <namedColor name="AppBlack">
+            <color red="0.23921568627450981" green="0.23921568627450981" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

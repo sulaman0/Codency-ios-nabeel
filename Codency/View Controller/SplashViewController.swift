@@ -39,7 +39,9 @@ class SplashViewController: UIViewController {
                     
                 } else {
                     if let vc: LoginViewController = UIStoryboard.initiate(storyboard: .auth) {
-                        UIApplication.shared.windows.first?.rootViewController = vc
+                        let navVC = UINavigationController(rootViewController: vc)
+                        navVC.setNavigationBarHidden(true, animated: true)
+                        UIApplication.shared.windows.first?.rootViewController = navVC
                         UIApplication.shared.windows.first?.makeKeyAndVisible()
                     }
                 }
