@@ -16,7 +16,6 @@
 		42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
-		42A34B612B0D155A0088CF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B5F2B0D155A0088CF64 /* Main.storyboard */; };
 		42A34B632B0D155B0088CF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B622B0D155B0088CF64 /* Assets.xcassets */; };
 		42A34B662B0D155B0088CF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B642B0D155B0088CF64 /* LaunchScreen.storyboard */; };
 		42A34B6F2B0D17C80088CF64 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 42A34B6E2B0D17C80088CF64 /* Lottie */; };
@@ -28,6 +27,9 @@
 		42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B7D2B0D1F660088CF64 /* LoginViewController.swift */; };
 		42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B812B0D1FD80088CF64 /* StoryboardExtension.swift */; };
 		42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B832B0D20050088CF64 /* NSObjectExtension.swift */; };
+		42A4D3352B0FBD0D005499FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4D3342B0FBD0D005499FA /* HomeViewController.swift */; };
+		42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4D3362B0FBD23005499FA /* HomeCollectionViewCell.swift */; };
+		42A4D3392B0FBD23005499FA /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A4D3372B0FBD23005499FA /* HomeCollectionViewCell.xib */; };
 		42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */; };
 		42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */; };
 		42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */; };
@@ -41,7 +43,6 @@
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42A34B602B0D155A0088CF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42A34B622B0D155B0088CF64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A34B652B0D155B0088CF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A34B672B0D155B0088CF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +57,9 @@
 		42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
 		42A34B912B0D29590088CF64 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		42A34B952B0D29590088CF64 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
+		42A4D3342B0FBD0D005499FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		42A4D3362B0FBD23005499FA /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		42A4D3372B0FBD23005499FA /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		4202BC852B0E7C420057B022 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				42A4D3332B0FBCF9005499FA /* Home */,
 				4202BC862B0E7C560057B022 /* TabbarViewController.swift */,
 			);
 			path = Main;
@@ -125,7 +130,6 @@
 		42A34B732B0D19010088CF64 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				42A34B5F2B0D155A0088CF64 /* Main.storyboard */,
 				42A34B642B0D155B0088CF64 /* LaunchScreen.storyboard */,
 				42A34B742B0D193A0088CF64 /* Splash.storyboard */,
 				42A34B7B2B0D1F340088CF64 /* Auth.storyboard */,
@@ -171,6 +175,16 @@
 				42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		42A4D3332B0FBCF9005499FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				42A4D3342B0FBD0D005499FA /* HomeViewController.swift */,
+				42A4D3362B0FBD23005499FA /* HomeCollectionViewCell.swift */,
+				42A4D3372B0FBD23005499FA /* HomeCollectionViewCell.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		42BBEBE92B0E7525006A33AB /* Auth */ = {
@@ -255,10 +269,10 @@
 				42A34B7A2B0D1E780088CF64 /* Colors.xcassets in Resources */,
 				42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */,
 				42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */,
+				42A4D3392B0FBD23005499FA /* HomeCollectionViewCell.xib in Resources */,
 				42A34B752B0D193A0088CF64 /* Splash.storyboard in Resources */,
 				42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */,
 				42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */,
-				42A34B612B0D155A0088CF64 /* Main.storyboard in Resources */,
 				42A34B7C2B0D1F340088CF64 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,26 +289,20 @@
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
 				42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */,
 				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
+				42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */,
 				42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */,
 				42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */,
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
 				42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */,
+				42A4D3352B0FBD0D005499FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		42A34B5F2B0D155A0088CF64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42A34B602B0D155A0088CF64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		42A34B642B0D155B0088CF64 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

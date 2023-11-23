@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham-Bold.otf">
+            <string>Gotham-Bold</string>
+        </array>
+        <array key="Gotham-Book.otf">
+            <string>Gotham-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Logout-->
         <scene sceneID="pHA-bY-v6Y">
@@ -44,14 +52,120 @@
         <!--Home-->
         <scene sceneID="FRE-PP-cl1">
             <objects>
-                <viewController id="nGb-6z-2j3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="nGb-6z-2j3" customClass="HomeViewController" customModule="Codency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YBl-c7-fNl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dae-uS-Myp">
+                                <rect key="frame" x="0.0" y="-40" width="393" height="179.33333333333334"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CH1-8g-dkJ">
+                                        <rect key="frame" x="25" y="98.999999999999986" width="343" height="60.333333333333329"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Jx-XH-pyH">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="60.333333333333336"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, June 24th, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qS-MW-XcX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="283" height="16.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="14"/>
+                                                        <color key="textColor" name="SecondaryText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahsan Mahmood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzN-yh-hlO">
+                                                        <rect key="frame" x="0.0" y="21.333333333333329" width="283" height="17.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="15"/>
+                                                        <color key="textColor" name="AppBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chief Executive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMB-Kh-9UG">
+                                                        <rect key="frame" x="0.0" y="44" width="283" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="14"/>
+                                                        <color key="textColor" name="SecondaryText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15w-dj-obW">
+                                                <rect key="frame" x="283" y="0.3333333333333357" width="60" height="60"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="M6Y-7J-Lmn">
+                                                        <rect key="frame" x="8" y="7.9999999999999929" width="44" height="44"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="16"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GrayColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="M6Y-7J-Lmn" firstAttribute="top" secondItem="15w-dj-obW" secondAttribute="top" constant="8" id="Aio-Of-3zi"/>
+                                                    <constraint firstAttribute="width" secondItem="15w-dj-obW" secondAttribute="height" multiplier="1:1" id="M6k-nn-gAW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="M6Y-7J-Lmn" secondAttribute="bottom" constant="8" id="YWW-pl-IVr"/>
+                                                    <constraint firstAttribute="width" constant="60" id="e0y-L4-OK1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="M6Y-7J-Lmn" secondAttribute="trailing" constant="8" id="miN-cm-1qj"/>
+                                                    <constraint firstItem="M6Y-7J-Lmn" firstAttribute="leading" secondItem="15w-dj-obW" secondAttribute="leading" constant="8" id="wNM-3A-dls"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CH1-8g-dkJ" firstAttribute="leading" secondItem="dae-uS-Myp" secondAttribute="leading" constant="25" id="Apv-F0-lFZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="CH1-8g-dkJ" secondAttribute="bottom" constant="20" id="sg8-4n-iXZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="CH1-8g-dkJ" secondAttribute="trailing" constant="25" id="vdN-5Z-Bg1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency Codes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvy-TS-W0f">
+                                <rect key="frame" x="25" y="157.33333333333334" width="131.66666666666666" height="18.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="16"/>
+                                <color key="textColor" name="AppBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mcE-1N-tMk">
+                                <rect key="frame" x="25" y="194" width="343" height="557"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PNe-o1-tr6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Rrj-3g-u9y"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="dae-uS-Myp" firstAttribute="top" secondItem="YBl-c7-fNl" secondAttribute="top" constant="-40" id="1nr-1p-BA4"/>
+                            <constraint firstItem="Rrj-3g-u9y" firstAttribute="trailing" secondItem="dae-uS-Myp" secondAttribute="trailing" id="3Wa-WI-EH0"/>
+                            <constraint firstItem="mcE-1N-tMk" firstAttribute="top" secondItem="uvy-TS-W0f" secondAttribute="bottom" constant="18" id="Es3-b4-7cq"/>
+                            <constraint firstItem="mcE-1N-tMk" firstAttribute="leading" secondItem="Rrj-3g-u9y" secondAttribute="leading" constant="25" id="Jkw-bc-Rxo"/>
+                            <constraint firstItem="uvy-TS-W0f" firstAttribute="top" secondItem="dae-uS-Myp" secondAttribute="bottom" constant="18" id="Mdu-c0-oDl"/>
+                            <constraint firstItem="dae-uS-Myp" firstAttribute="leading" secondItem="Rrj-3g-u9y" secondAttribute="leading" id="O8r-yc-aqM"/>
+                            <constraint firstItem="Rrj-3g-u9y" firstAttribute="top" secondItem="CH1-8g-dkJ" secondAttribute="top" id="R7O-kd-X6c"/>
+                            <constraint firstItem="uvy-TS-W0f" firstAttribute="leading" secondItem="Rrj-3g-u9y" secondAttribute="leading" constant="25" id="dgr-ah-ZCy"/>
+                            <constraint firstItem="Rrj-3g-u9y" firstAttribute="bottom" secondItem="mcE-1N-tMk" secondAttribute="bottom" constant="18" id="fXx-u9-cgW"/>
+                            <constraint firstItem="Rrj-3g-u9y" firstAttribute="trailing" secondItem="mcE-1N-tMk" secondAttribute="trailing" constant="25" id="lfs-j8-GvV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="USc-Ss-k5Z"/>
+                    <connections>
+                        <outlet property="homeCollectionView" destination="mcE-1N-tMk" id="ynZ-Uc-sI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teJ-sA-Ch4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +178,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qmx-Ff-yP8">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="tintColor"/>
                         <color key="selectedImageTintColor" name="AppBlack"/>
                     </tabBar>
@@ -80,14 +194,24 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogo" width="136" height="97"/>
         <image name="Home" width="24" height="24"/>
         <image name="Logout" width="20" height="20"/>
         <image name="Notifications" width="18.666666030883789" height="18.666666030883789"/>
         <namedColor name="AppBlack">
             <color red="0.23921568627450981" green="0.23921568627450981" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="GrayColor">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.5490196078431373" green="0.5490196078431373" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
