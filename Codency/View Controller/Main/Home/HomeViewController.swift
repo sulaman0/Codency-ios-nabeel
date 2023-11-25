@@ -11,6 +11,11 @@ class HomeViewController: UIViewController {
     //MARK:- Outlets
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
+    //MARK:- Properties
+    private var colors: [UIColor] = [
+        .red, .blue, .orange, .systemPink, .black, .green
+    ]
+    
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +40,14 @@ class HomeViewController: UIViewController {
 //MARK:- Collectionview delegate and datasource
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
+        colors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.className, for: indexPath) as? HomeCollectionViewCell else {
             return HomeCollectionViewCell()
         }
+        cell.mainView.backgroundColor = colors[indexPath.item]
         return cell
     }
     

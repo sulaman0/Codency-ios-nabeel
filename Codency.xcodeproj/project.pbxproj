@@ -14,6 +14,9 @@
 		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
 		42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */; };
 		42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */; };
+		426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266504F2B12497100B48114 /* AlertsTableViewCell.swift */; };
+		426650522B12497100B48114 /* AlertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426650502B12497100B48114 /* AlertsTableViewCell.xib */; };
+		4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274A70B2B1242D1004C211C /* AlertsViewController.swift */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
 		42A34B632B0D155B0088CF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B622B0D155B0088CF64 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		4202BC862B0E7C560057B022 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		4266504F2B12497100B48114 /* AlertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTableViewCell.swift; sourceTree = "<group>"; };
+		426650502B12497100B48114 /* AlertsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertsTableViewCell.xib; sourceTree = "<group>"; };
+		4274A70B2B1242D1004C211C /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,10 +86,21 @@
 		4202BC852B0E7C420057B022 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4274A70A2B12428D004C211C /* Alerts */,
 				42A4D3332B0FBCF9005499FA /* Home */,
 				4202BC862B0E7C560057B022 /* TabbarViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		4274A70A2B12428D004C211C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				4274A70B2B1242D1004C211C /* AlertsViewController.swift */,
+				4266504F2B12497100B48114 /* AlertsTableViewCell.swift */,
+				426650502B12497100B48114 /* AlertsTableViewCell.xib */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		42A34B4D2B0D155A0088CF64 = {
@@ -271,6 +288,7 @@
 				42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */,
 				42A4D3392B0FBD23005499FA /* HomeCollectionViewCell.xib in Resources */,
 				42A34B752B0D193A0088CF64 /* Splash.storyboard in Resources */,
+				426650522B12497100B48114 /* AlertsTableViewCell.xib in Resources */,
 				42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */,
 				42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */,
 				42A34B7C2B0D1F340088CF64 /* Auth.storyboard in Resources */,
@@ -286,6 +304,7 @@
 			files = (
 				42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */,
 				42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */,
+				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
 				42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */,
 				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
@@ -293,6 +312,7 @@
 				42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */,
 				42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */,
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
+				4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */,
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
 				42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */,
