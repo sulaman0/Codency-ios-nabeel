@@ -29,5 +29,6 @@ extension UIStoryboard {
     enum StoryboardEnum: String {
         case auth = "Auth"
         case main = "Main"
+        case filters = "Filters"
     }
 }

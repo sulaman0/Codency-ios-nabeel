@@ -14,8 +14,16 @@
 		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
 		42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */; };
 		42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */; };
+		424BA7B12B1259190005BD2E /* EmergencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B02B1259190005BD2E /* EmergencyCode.swift */; };
+		424BA7B32B125AF20005BD2E /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B22B125AF20005BD2E /* Staff.swift */; };
+		424BA7BA2B125CED0005BD2E /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */; };
+		424BA7BB2B125CED0005BD2E /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */; };
 		426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266504F2B12497100B48114 /* AlertsTableViewCell.swift */; };
 		426650522B12497100B48114 /* AlertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426650502B12497100B48114 /* AlertsTableViewCell.xib */; };
+		426650542B124CD800B48114 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426650532B124CD800B48114 /* Filters.storyboard */; };
+		426650572B124D2600B48114 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426650562B124D2600B48114 /* FiltersViewController.swift */; };
+		4266505A2B12531000B48114 /* SelectFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426650582B12531000B48114 /* SelectFilterCollectionViewCell.swift */; };
+		4266505B2B12531000B48114 /* SelectFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426650592B12531000B48114 /* SelectFilterCollectionViewCell.xib */; };
 		4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274A70B2B1242D1004C211C /* AlertsViewController.swift */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
@@ -36,6 +44,10 @@
 		42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */; };
 		42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */; };
 		42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */; };
+		42D83D742B12639A00A71E72 /* EmergencyCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D83D732B12639A00A71E72 /* EmergencyCodesViewController.swift */; };
+		42D83D772B12667D00A71E72 /* CodesAndStaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D83D752B12667D00A71E72 /* CodesAndStaffTableViewCell.swift */; };
+		42D83D782B12667D00A71E72 /* CodesAndStaffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D83D762B12667D00A71E72 /* CodesAndStaffTableViewCell.xib */; };
+		42D83D7A2B126A9700A71E72 /* StaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D83D792B126A9700A71E72 /* StaffViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +55,16 @@
 		4202BC862B0E7C560057B022 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		424BA7B02B1259190005BD2E /* EmergencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCode.swift; sourceTree = "<group>"; };
+		424BA7B22B125AF20005BD2E /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		4266504F2B12497100B48114 /* AlertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTableViewCell.swift; sourceTree = "<group>"; };
 		426650502B12497100B48114 /* AlertsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertsTableViewCell.xib; sourceTree = "<group>"; };
+		426650532B124CD800B48114 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
+		426650562B124D2600B48114 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		426650582B12531000B48114 /* SelectFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		426650592B12531000B48114 /* SelectFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectFilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		4274A70B2B1242D1004C211C /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +89,10 @@
 		42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		42D83D732B12639A00A71E72 /* EmergencyCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCodesViewController.swift; sourceTree = "<group>"; };
+		42D83D752B12667D00A71E72 /* CodesAndStaffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesAndStaffTableViewCell.swift; sourceTree = "<group>"; };
+		42D83D762B12667D00A71E72 /* CodesAndStaffTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodesAndStaffTableViewCell.xib; sourceTree = "<group>"; };
+		42D83D792B126A9700A71E72 /* StaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +110,60 @@
 		4202BC852B0E7C420057B022 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				426650552B124D0B00B48114 /* Filters */,
 				4274A70A2B12428D004C211C /* Alerts */,
 				42A4D3332B0FBCF9005499FA /* Home */,
 				4202BC862B0E7C560057B022 /* TabbarViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		424BA7AD2B1258370005BD2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				424BA7B02B1259190005BD2E /* EmergencyCode.swift */,
+				424BA7B22B125AF20005BD2E /* Staff.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		424BA7B42B125C4F0005BD2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				42D83D6E2B12627100A71E72 /* CodesAndStaff */,
+				424BA7B72B125C690005BD2E /* ApplyFilter */,
+				424BA7B52B125C550005BD2E /* SelectFilter */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		424BA7B52B125C550005BD2E /* SelectFilter */ = {
+			isa = PBXGroup;
+			children = (
+				426650582B12531000B48114 /* SelectFilterCollectionViewCell.swift */,
+				426650592B12531000B48114 /* SelectFilterCollectionViewCell.xib */,
+			);
+			path = SelectFilter;
+			sourceTree = "<group>";
+		};
+		424BA7B72B125C690005BD2E /* ApplyFilter */ = {
+			isa = PBXGroup;
+			children = (
+				424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */,
+				424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */,
+			);
+			path = ApplyFilter;
+			sourceTree = "<group>";
+		};
+		426650552B124D0B00B48114 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				424BA7B42B125C4F0005BD2E /* Cells */,
+				426650562B124D2600B48114 /* FiltersViewController.swift */,
+				42D83D732B12639A00A71E72 /* EmergencyCodesViewController.swift */,
+				42D83D792B126A9700A71E72 /* StaffViewController.swift */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 		4274A70A2B12428D004C211C /* Alerts */ = {
@@ -122,6 +195,7 @@
 		42A34B582B0D155A0088CF64 /* Codency */ = {
 			isa = PBXGroup;
 			children = (
+				424BA7AD2B1258370005BD2E /* Model */,
 				42A34B7F2B0D1FBA0088CF64 /* Helpers */,
 				42A34B592B0D155A0088CF64 /* AppDelegate.swift */,
 				42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */,
@@ -151,6 +225,7 @@
 				42A34B742B0D193A0088CF64 /* Splash.storyboard */,
 				42A34B7B2B0D1F340088CF64 /* Auth.storyboard */,
 				4202BC832B0E7C020057B022 /* Main.storyboard */,
+				426650532B124CD800B48114 /* Filters.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -213,6 +288,15 @@
 				42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		42D83D6E2B12627100A71E72 /* CodesAndStaff */ = {
+			isa = PBXGroup;
+			children = (
+				42D83D752B12667D00A71E72 /* CodesAndStaffTableViewCell.swift */,
+				42D83D762B12667D00A71E72 /* CodesAndStaffTableViewCell.xib */,
+			);
+			path = CodesAndStaff;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,15 +367,19 @@
 				42A34B632B0D155B0088CF64 /* Assets.xcassets in Resources */,
 				42A34B722B0D18AC0088CF64 /* SplashLottie.json in Resources */,
 				4202BC842B0E7C020057B022 /* Main.storyboard in Resources */,
+				42D83D782B12667D00A71E72 /* CodesAndStaffTableViewCell.xib in Resources */,
 				42A34B7A2B0D1E780088CF64 /* Colors.xcassets in Resources */,
 				42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */,
 				42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */,
 				42A4D3392B0FBD23005499FA /* HomeCollectionViewCell.xib in Resources */,
 				42A34B752B0D193A0088CF64 /* Splash.storyboard in Resources */,
 				426650522B12497100B48114 /* AlertsTableViewCell.xib in Resources */,
+				424BA7BB2B125CED0005BD2E /* FilterCollectionViewCell.xib in Resources */,
 				42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */,
 				42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */,
+				426650542B124CD800B48114 /* Filters.storyboard in Resources */,
 				42A34B7C2B0D1F340088CF64 /* Auth.storyboard in Resources */,
+				4266505B2B12531000B48114 /* SelectFilterCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +399,19 @@
 				42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */,
 				42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */,
 				42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */,
+				4266505A2B12531000B48114 /* SelectFilterCollectionViewCell.swift in Sources */,
+				42D83D7A2B126A9700A71E72 /* StaffViewController.swift in Sources */,
+				424BA7BA2B125CED0005BD2E /* FilterCollectionViewCell.swift in Sources */,
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
+				42D83D742B12639A00A71E72 /* EmergencyCodesViewController.swift in Sources */,
 				4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */,
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
+				424BA7B32B125AF20005BD2E /* Staff.swift in Sources */,
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
+				42D83D772B12667D00A71E72 /* CodesAndStaffTableViewCell.swift in Sources */,
+				424BA7B12B1259190005BD2E /* EmergencyCode.swift in Sources */,
 				42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */,
+				426650572B124D2600B48114 /* FiltersViewController.swift in Sources */,
 				42A4D3352B0FBD0D005499FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

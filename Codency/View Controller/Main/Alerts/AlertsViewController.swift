@@ -29,8 +29,18 @@ class AlertsViewController: UIViewController {
                                       bundle: nil),
                                 forCellReuseIdentifier: AlertsTableViewCell.className)
     }
+    
+    //MARK:- IBActions
+    @IBAction func didTapFilter(_ sender: Any) {
+        if let vc: FiltersViewController = UIStoryboard.initiate(storyboard: .filters) {
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            present(vc, animated: true)
+        }
+    }
 }
 
+//MARK:- Collectionview delegate and datasource
 extension AlertsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         colors.count
