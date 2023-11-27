@@ -44,6 +44,9 @@
 		42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */; };
 		42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */; };
 		42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */; };
+		42D30A572B14FE330096225F /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30A562B14FE330096225F /* APIHandler.swift */; };
+		42D30A5C2B15013B0096225F /* APITypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30A5B2B15013B0096225F /* APITypes.swift */; };
+		42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30A5D2B1502600096225F /* OptionalsExtension.swift */; };
 		42D83D742B12639A00A71E72 /* EmergencyCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D83D732B12639A00A71E72 /* EmergencyCodesViewController.swift */; };
 		42D83D772B12667D00A71E72 /* CodesAndStaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D83D752B12667D00A71E72 /* CodesAndStaffTableViewCell.swift */; };
 		42D83D782B12667D00A71E72 /* CodesAndStaffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D83D762B12667D00A71E72 /* CodesAndStaffTableViewCell.xib */; };
@@ -89,6 +92,9 @@
 		42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		42D30A562B14FE330096225F /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		42D30A5B2B15013B0096225F /* APITypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITypes.swift; sourceTree = "<group>"; };
+		42D30A5D2B1502600096225F /* OptionalsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalsExtension.swift; sourceTree = "<group>"; };
 		42D83D732B12639A00A71E72 /* EmergencyCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCodesViewController.swift; sourceTree = "<group>"; };
 		42D83D752B12667D00A71E72 /* CodesAndStaffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodesAndStaffTableViewCell.swift; sourceTree = "<group>"; };
 		42D83D762B12667D00A71E72 /* CodesAndStaffTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodesAndStaffTableViewCell.xib; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 		42A34B582B0D155A0088CF64 /* Codency */ = {
 			isa = PBXGroup;
 			children = (
+				42D30A552B14FE180096225F /* Network Client */,
 				424BA7AD2B1258370005BD2E /* Model */,
 				42A34B7F2B0D1FBA0088CF64 /* Helpers */,
 				42A34B592B0D155A0088CF64 /* AppDelegate.swift */,
@@ -254,6 +261,7 @@
 				42A34B812B0D1FD80088CF64 /* StoryboardExtension.swift */,
 				42A34B832B0D20050088CF64 /* NSObjectExtension.swift */,
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
+				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -288,6 +296,15 @@
 				42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		42D30A552B14FE180096225F /* Network Client */ = {
+			isa = PBXGroup;
+			children = (
+				42D30A562B14FE330096225F /* APIHandler.swift */,
+				42D30A5B2B15013B0096225F /* APITypes.swift */,
+			);
+			path = "Network Client";
 			sourceTree = "<group>";
 		};
 		42D83D6E2B12627100A71E72 /* CodesAndStaff */ = {
@@ -394,6 +411,8 @@
 				42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */,
 				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
+				42D30A5C2B15013B0096225F /* APITypes.swift in Sources */,
+				42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */,
 				42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */,
 				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
 				42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */,
@@ -405,6 +424,7 @@
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
 				42D83D742B12639A00A71E72 /* EmergencyCodesViewController.swift in Sources */,
 				4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */,
+				42D30A572B14FE330096225F /* APIHandler.swift in Sources */,
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
 				424BA7B32B125AF20005BD2E /* Staff.swift in Sources */,
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
@@ -563,7 +583,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kobbex.Codency;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codency.qmsols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -590,7 +610,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kobbex.Codency;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codency.qmsols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
