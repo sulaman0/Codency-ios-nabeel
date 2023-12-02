@@ -8,6 +8,8 @@
 import Foundation
 enum APIError: String, Error {
     case local = "0"
+    case unknown
+    case parsingError
 }
 
 /* Response types. */

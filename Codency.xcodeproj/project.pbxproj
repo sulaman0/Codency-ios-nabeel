@@ -19,6 +19,7 @@
 		424BA7B32B125AF20005BD2E /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B22B125AF20005BD2E /* Staff.swift */; };
 		424BA7BA2B125CED0005BD2E /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */; };
 		424BA7BB2B125CED0005BD2E /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */; };
+		425235D82B1B30F600AD451F /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425235D72B1B30F600AD451F /* APIEndPoints.swift */; };
 		426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4266504F2B12497100B48114 /* AlertsTableViewCell.swift */; };
 		426650522B12497100B48114 /* AlertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426650502B12497100B48114 /* AlertsTableViewCell.xib */; };
 		426650542B124CD800B48114 /* Filters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426650532B124CD800B48114 /* Filters.storyboard */; };
@@ -64,6 +65,7 @@
 		424BA7B22B125AF20005BD2E /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		425235D72B1B30F600AD451F /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
 		4266504F2B12497100B48114 /* AlertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTableViewCell.swift; sourceTree = "<group>"; };
 		426650502B12497100B48114 /* AlertsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertsTableViewCell.xib; sourceTree = "<group>"; };
 		426650532B124CD800B48114 /* Filters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filters.storyboard; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				42D30A562B14FE330096225F /* APIHandler.swift */,
 				42D30A5B2B15013B0096225F /* APITypes.swift */,
+				425235D72B1B30F600AD451F /* APIEndPoints.swift */,
 			);
 			path = "Network Client";
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */,
 				42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */,
 				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
+				425235D82B1B30F600AD451F /* APIEndPoints.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
 				42D30A5C2B15013B0096225F /* APITypes.swift in Sources */,
 				4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */,

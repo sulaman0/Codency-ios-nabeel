@@ -40,7 +40,7 @@ class APIHandler {
         let (data, response) = try await session.data(for: request)
         
         guard let response  = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw APIError.local
+            throw APIError.unknown
         }
         
         do {
@@ -50,7 +50,7 @@ class APIHandler {
         }
         catch {
             print("Error handling response from API call '\(url)': \(error)")
-            throw APIError.local
+            throw APIError.parsingError
         }
     }
     
@@ -63,7 +63,9 @@ class APIHandler {
     }
     
     func login(with email: String, password: String) async throws -> BaseResponse<User>?  {
-        return try await post("login", ["email": "abc@gmail.com", "password": "123456781"])
+        return try await post(EndPoint.login.rawValue,
+                              ["email": email,
+                               "password": password])
     }
 }
 
