@@ -6,28 +6,31 @@
 //
 
 import Foundation
-enum APIError: String {
+enum APIError: String, Error {
     case local = "0"
 }
 
-protocol GeneratedProperties: Codable {
-    /**
-     * The API class will automatically make this call on responses from the server.
-     */
-
-    mutating func generateProperties()
-}
-
 /* Response types. */
-protocol APIResponse: Codable {
-    var status: String? { get }
+public class BaseResponse<T: Codable>: Codable {
+    var status: Bool?
+    var message: String?
     
-    var msg_en: String? { get }
-    var msg_ar: String? { get }
+    var payload: T?
 }
 
-struct EmptyResponse: APIResponse {
-    var status: String?
-    var msg_en: String?
-    var msg_ar: String?
+struct EmptyResponse: Codable {
+    var message: String?
+    var status: Bool?
 }
+
+
+struct User: Codable {
+    var name: String?
+    var email: String?
+    var designation: String?
+    var location: String?
+    var phone: String?
+    var token: String?
+}
+
+

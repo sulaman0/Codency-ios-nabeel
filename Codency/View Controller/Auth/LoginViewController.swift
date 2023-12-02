@@ -8,6 +8,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    //MARK:- Outlets
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
 
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
@@ -23,9 +26,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapLogin(_ sender: Any) {
-        if let vc: TabbarViewController = UIStoryboard.initiate(storyboard: .main) {
-            UIApplication.shared.windows.first?.rootViewController = vc
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+//        if let vc: TabbarViewController = UIStoryboard.initiate(storyboard: .main) {
+//            UIApplication.shared.windows.first?.rootViewController = vc
+//            UIApplication.shared.windows.first?.makeKeyAndVisible()
+//        }
+        Task {
+            let user = try await APIHandler.shared.login(with: "", password: "")
         }
     }
 }

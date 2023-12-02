@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4202BC842B0E7C020057B022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4202BC832B0E7C020057B022 /* Main.storyboard */; };
 		4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4202BC862B0E7C560057B022 /* TabbarViewController.swift */; };
+		4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */; };
 		42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B912B0D29590088CF64 /* Gotham-Bold.otf */; };
 		42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B952B0D29590088CF64 /* Gotham-Book.otf */; };
 		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		4202BC832B0E7C020057B022 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4202BC862B0E7C560057B022 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		424BA7B02B1259190005BD2E /* EmergencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCode.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				42A34B832B0D20050088CF64 /* NSObjectExtension.swift */,
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
 				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
+				4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
 				42D30A5C2B15013B0096225F /* APITypes.swift in Sources */,
+				4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */,
 				42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */,
 				42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */,
 				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
@@ -569,15 +573,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53AK4693N7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Codency/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,9 +592,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codency.qmsols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -596,15 +606,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53AK4693N7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Codency/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,9 +625,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codency.qmsols;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
