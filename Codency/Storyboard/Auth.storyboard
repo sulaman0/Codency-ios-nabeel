@@ -418,6 +418,9 @@
                             <constraint firstItem="Y5h-Jp-NqP" firstAttribute="top" secondItem="Hvv-rh-PM9" secondAttribute="top" constant="20" id="nlN-an-bw0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTF" destination="iZL-hb-UC9" id="2Kc-a3-A5S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a3-kt-pIK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

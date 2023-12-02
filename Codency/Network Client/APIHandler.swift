@@ -67,6 +67,12 @@ class APIHandler {
                               ["email": email,
                                "password": password])
     }
+    
+    @discardableResult
+    func resetPassword(with email: String) async throws -> BaseResponse<EmptyResponse>?  {
+        return try await post(EndPoint.resetPassword.rawValue,
+                              ["email": email])
+    }
 }
 
 /**
