@@ -43,6 +43,9 @@
 		42A4D3352B0FBD0D005499FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4D3342B0FBD0D005499FA /* HomeViewController.swift */; };
 		42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4D3362B0FBD23005499FA /* HomeCollectionViewCell.swift */; };
 		42A4D3392B0FBD23005499FA /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42A4D3372B0FBD23005499FA /* HomeCollectionViewCell.xib */; };
+		42A82FBE2B1E3BF000396255 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A82FBD2B1E3BF000396255 /* Common.swift */; };
+		42A82FC02B1E3FF600396255 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */; };
+		42A82FC22B1E441200396255 /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 42A82FC12B1E441200396255 /* Loader.json */; };
 		42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */; };
 		42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */; };
 		42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */; };
@@ -93,6 +96,9 @@
 		42A4D3342B0FBD0D005499FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		42A4D3362B0FBD23005499FA /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		42A4D3372B0FBD23005499FA /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		42A82FBD2B1E3BF000396255 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		42A82FC12B1E441200396255 /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
 		42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +227,7 @@
 		42A34B702B0D17CD0088CF64 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				42A82FC12B1E441200396255 /* Loader.json */,
 				42A34B852B0D294A0088CF64 /* Font */,
 				42A34B622B0D155B0088CF64 /* Assets.xcassets */,
 				42A34B712B0D18AC0088CF64 /* SplashLottie.json */,
@@ -255,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				42A34B802B0D1FC20088CF64 /* Extension */,
+				42A82FBD2B1E3BF000396255 /* Common.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
 				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
 				4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */,
+				42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				42A34B7A2B0D1E780088CF64 /* Colors.xcassets in Resources */,
 				42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */,
 				42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */,
+				42A82FC22B1E441200396255 /* Loader.json in Resources */,
 				42A4D3392B0FBD23005499FA /* HomeCollectionViewCell.xib in Resources */,
 				42A34B752B0D193A0088CF64 /* Splash.storyboard in Resources */,
 				426650522B12497100B48114 /* AlertsTableViewCell.xib in Resources */,
@@ -418,6 +428,7 @@
 				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
 				425235D82B1B30F600AD451F /* APIEndPoints.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
+				42A82FBE2B1E3BF000396255 /* Common.swift in Sources */,
 				42D30A5C2B15013B0096225F /* APITypes.swift in Sources */,
 				4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */,
 				42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */,
@@ -429,6 +440,7 @@
 				4266505A2B12531000B48114 /* SelectFilterCollectionViewCell.swift in Sources */,
 				42D83D7A2B126A9700A71E72 /* StaffViewController.swift in Sources */,
 				424BA7BA2B125CED0005BD2E /* FilterCollectionViewCell.swift in Sources */,
+				42A82FC02B1E3FF600396255 /* UIColorExtension.swift in Sources */,
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
 				42D83D742B12639A00A71E72 /* EmergencyCodesViewController.swift in Sources */,
 				4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */,

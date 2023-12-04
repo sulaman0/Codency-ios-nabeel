@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum HttpMethod: String {
+    case post = "POST"
+    case put = "PUT"
+}
+
 class APIHandler {
     /**
      * Shared instance. Before this can be used, configure() must be called.
@@ -22,7 +27,10 @@ class APIHandler {
      * Post to the specified path. The completion handler is called on the main
      * queue.
      */
-    func post<T: Codable>(_ path: String, _ argsFixed:[String: Any]!) async throws -> BaseResponse<T> {
+    func call<T: Codable>(_ path: String,
+                          _ argsFixed:[String: Any]!,
+                          headers: [String: String]? = nil,
+                          method: HttpMethod = .post) async throws -> BaseResponse<T> {
         let url = URL(string: baseUrl + path)!
         var args: [String: Any] = [:]
         if argsFixed != nil {
@@ -30,8 +38,12 @@ class APIHandler {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = getAPIHeaders()
+        request.httpMethod = method.rawValue
+        var apiHeaders = getAPIHeaders()
+        if let headers {
+            apiHeaders += headers
+        }
+        request.allHTTPHeaderFields = apiHeaders
         request.httpBody = try? JSONSerialization.data(withJSONObject: args,
                                                       options: [])
         
@@ -62,16 +74,32 @@ class APIHandler {
         ]
     }
     
-    func login(with email: String, password: String) async throws -> BaseResponse<User>?  {
-        return try await post(EndPoint.login.rawValue,
+    func login(with email: String, password: String) async throws -> BaseResponse<UserData>?  {
+        return try await call(EndPoint.login.rawValue,
                               ["email": email,
                                "password": password])
     }
     
     @discardableResult
     func resetPassword(with email: String) async throws -> BaseResponse<EmptyResponse>?  {
-        return try await post(EndPoint.resetPassword.rawValue,
+        return try await call(EndPoint.resetPassword.rawValue,
                               ["email": email])
+    }
+    
+    func verifyCode(with email: String, code: String) async throws -> BaseResponse<VerifyCode>?  {
+        return try await call(EndPoint.verifyResetPassword.rawValue,
+                              ["email": email,
+                               "code": code])
+    }
+    
+    func updatePassword(with password: String,
+                        confirmPassword: String,
+                        token: String) async throws -> BaseResponse<User>?  {
+        return try await call(EndPoint.updatePassword.rawValue,
+                              ["password": password,
+                               "password_confirmation": confirmPassword],
+                              headers: ["Authorization": "Bearer \(token)"],
+                              method: .put)
     }
 }
 

@@ -17,8 +17,9 @@ class ForgotPasswordViewController: UIViewController {
 
     }
     
-    private func goToVerifyCode() {
+    private func goToVerifyCode(with email: String) {
         if let vc: VerifyCodeViewController = UIStoryboard.initiate(storyboard: .auth) {
+            vc.email = email
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -36,9 +37,12 @@ class ForgotPasswordViewController: UIViewController {
         
         Task {
             do {
+                Commons.showActivityIndicator()
                 try await APIHandler.shared.resetPassword(with: email)
-                goToVerifyCode()
+                Commons.hideActivityIndicator()
+                goToVerifyCode(with: email)
             } catch (let error) {
+                Commons.hideActivityIndicator()
                 print(error.localizedDescription)
             }
         }

@@ -11,9 +11,11 @@ class LoginViewController: UIViewController {
     //MARK:- Outlets
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var passwordEyeButton: UIButton!
 
     //MARK:- Properties
-    private var user: User? {
+    private var user: UserData? {
         didSet {
             goToHome()
         }
@@ -39,6 +41,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func didTapEyeIcon(_ sender: Any) {
+        passwordTF.isSecureTextEntry.toggle()
+        passwordTF.isSecureTextEntry ? passwordEyeButton.setImage(UIImage(named: "EyeIcon"), for: .normal) : passwordEyeButton.setImage(UIImage(named: "Back"), for: .normal)
+    }
+    
     @IBAction func didTapLogin(_ sender: Any) {
         guard let email = emailTF.text, email.isEmail else {
             // Show Error
@@ -52,9 +59,12 @@ class LoginViewController: UIViewController {
         
         Task {
             do {
+                Commons.showActivityIndicator()
                 let response = try await APIHandler.shared.login(with: email, password: password)
+                Commons.hideActivityIndicator()
                 user = response?.payload
             } catch (let error) {
+                Commons.hideActivityIndicator()
                 print(error.localizedDescription)
             }
         }

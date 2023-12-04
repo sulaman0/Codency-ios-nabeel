@@ -25,6 +25,10 @@ struct EmptyResponse: Codable {
     var status: Bool?
 }
 
+struct UserData: Codable {
+    var user: User?
+    var token: String?
+}
 
 struct User: Codable {
     var name: String?
@@ -32,6 +36,9 @@ struct User: Codable {
     var designation: String?
     var location: String?
     var phone: String?
+}
+
+struct VerifyCode: Codable {
     var token: String?
 }
 

@@ -8,8 +8,8 @@
 import Foundation
 
 enum EndPoint: String {
-    
-case login = "login"
-case resetPassword = "request-reset-password"
-    
+    case login = "login"
+    case resetPassword = "request-reset-password"
+    case verifyResetPassword = "verify-reset-password-code"
+    case updatePassword = "update-password"
 }
