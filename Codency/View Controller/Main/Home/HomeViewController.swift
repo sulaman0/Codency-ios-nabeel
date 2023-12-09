@@ -9,6 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
     //MARK:- Outlets
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var designationLbl: UILabel!
+    
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     //MARK:- Properties
@@ -25,6 +28,12 @@ class HomeViewController: UIViewController {
 
         setupCollectionView()
         getEmergencyCodes()
+        setupUserData()
+    }
+    
+    private func setupUserData() {
+        nameLbl.text = UserDefaultsConfig.user?.name
+        designationLbl.text = UserDefaultsConfig.user?.designation
     }
     
     private func setupCollectionView() {

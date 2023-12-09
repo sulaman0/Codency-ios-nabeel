@@ -137,7 +137,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2d-jU-Jfe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2d-jU-Jfe">
                                 <rect key="frame" x="20" y="194" width="353" height="575"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -161,6 +161,8 @@
                     <tabBarItem key="tabBarItem" title="Emergency Alerts" image="Notifications" id="xFJ-fk-tfj"/>
                     <connections>
                         <outlet property="alertTableView" destination="F2d-jU-Jfe" id="KSi-k5-agg"/>
+                        <outlet property="userDesignationLbl" destination="27n-UO-Noh" id="wnw-ll-rY9"/>
+                        <outlet property="usernameLbl" destination="f7U-vF-9gP" id="FkS-bF-Wwh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saa-fC-dVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -282,7 +284,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" id="USc-Ss-k5Z"/>
                     <connections>
+                        <outlet property="designationLbl" destination="BMB-Kh-9UG" id="3Qf-rV-rHi"/>
                         <outlet property="homeCollectionView" destination="mcE-1N-tMk" id="ynZ-Uc-sI5"/>
+                        <outlet property="nameLbl" destination="fzN-yh-hlO" id="nQ8-fe-L2Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teJ-sA-Ch4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

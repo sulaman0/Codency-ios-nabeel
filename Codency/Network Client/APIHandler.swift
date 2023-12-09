@@ -120,9 +120,14 @@ class APIHandler {
     
     @discardableResult
     func sendAlert(to codeId: Int) async throws -> BaseResponse<EmptyResponse>?  {
-        return try await call(EndPoint.sendAlert.rawValue,
+        return try await call(EndPoint.alert.rawValue,
                               ["code_id": codeId],
                               method: .post)
+    }
+    
+    func getAlarmAlerts() async throws -> BaseResponse<AlarmResponse>?  {
+        return try await call(EndPoint.alert.rawValue,
+                              method: .get)
     }
 }
 

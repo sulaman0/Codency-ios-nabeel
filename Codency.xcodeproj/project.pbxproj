@@ -30,6 +30,7 @@
 		4269DA8B2B245BD500B4771C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8A2B245BD500B4771C /* ArrayExtension.swift */; };
 		4269DA8D2B245EBA00B4771C /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8C2B245EBA00B4771C /* LogoutViewController.swift */; };
 		4269DA8F2B245F3000B4771C /* UIApplication+UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */; };
+		4269DA912B246FEC00B4771C /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA902B246FEC00B4771C /* ScrollViewExtension.swift */; };
 		4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274A70B2B1242D1004C211C /* AlertsViewController.swift */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
@@ -83,6 +84,7 @@
 		4269DA8A2B245BD500B4771C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		4269DA8C2B245EBA00B4771C /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UIWindowExtension.swift"; sourceTree = "<group>"; };
+		4269DA902B246FEC00B4771C /* ScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExtension.swift; sourceTree = "<group>"; };
 		4274A70B2B1242D1004C211C /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
 				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
 				4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */,
+				4269DA902B246FEC00B4771C /* ScrollViewExtension.swift */,
 				4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */,
 				4269DA8A2B245BD500B4771C /* ArrayExtension.swift */,
 				42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */,
@@ -449,6 +452,7 @@
 				42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */,
 				42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */,
 				4269DA8B2B245BD500B4771C /* ArrayExtension.swift in Sources */,
+				4269DA912B246FEC00B4771C /* ScrollViewExtension.swift in Sources */,
 				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
 				42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */,
 				42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */,

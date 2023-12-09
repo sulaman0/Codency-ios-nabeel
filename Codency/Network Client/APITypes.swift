@@ -72,3 +72,29 @@ struct Meta: Codable {
         }
     }
 }
+
+struct AlarmResponse: Codable {
+    var data: [Alarm]?
+    var meta: Meta?
+}
+
+struct Alarm: Codable {
+    var id: Int?
+    var name: String?
+    var ecg_code: String?
+    var ecg_color_code: String?
+    var details: AlarmDetail?
+    var responded_action: String?
+    var should_show_action_btn: Bool?
+}
+
+struct AlarmDetail: Codable {
+    var location: GenericDetail?
+    var alarm_by: GenericDetail?
+    var alarm_triggered_at: GenericDetail?
+}
+
+struct GenericDetail: Codable {
+    var name: String?
+    var value: String?
+}
