@@ -19,23 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if UserDefaultsConfig.user.isSome {
-            goToHome()
+            Commons.goToHome()
         } else {
-            goToLogin()
-        }
-    }
-    
-    private func goToHome() {
-        if let vc: TabbarViewController = UIStoryboard.initiate(storyboard: .main) {
-            UIApplication.shared.windows.first?.rootViewController = vc
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
-        }
-    }
-    
-    private func goToLogin() {
-        if let vc: LoginViewController = UIStoryboard.initiate(storyboard: .auth) {
-            UIApplication.shared.windows.first?.rootViewController = vc
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            Commons.goToLogin()
         }
     }
 

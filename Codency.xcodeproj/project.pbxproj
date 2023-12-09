@@ -28,6 +28,8 @@
 		4269DA872B244D5000B4771C /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA862B244D5000B4771C /* UIFontExtension.swift */; };
 		4269DA892B2453B800B4771C /* Userdefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA882B2453B800B4771C /* Userdefaults.swift */; };
 		4269DA8B2B245BD500B4771C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8A2B245BD500B4771C /* ArrayExtension.swift */; };
+		4269DA8D2B245EBA00B4771C /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8C2B245EBA00B4771C /* LogoutViewController.swift */; };
+		4269DA8F2B245F3000B4771C /* UIApplication+UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */; };
 		4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274A70B2B1242D1004C211C /* AlertsViewController.swift */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
@@ -79,6 +81,8 @@
 		4269DA862B244D5000B4771C /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		4269DA882B2453B800B4771C /* Userdefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdefaults.swift; sourceTree = "<group>"; };
 		4269DA8A2B245BD500B4771C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		4269DA8C2B245EBA00B4771C /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UIWindowExtension.swift"; sourceTree = "<group>"; };
 		4274A70B2B1242D1004C211C /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				4274A70A2B12428D004C211C /* Alerts */,
 				42A4D3332B0FBCF9005499FA /* Home */,
 				4202BC862B0E7C560057B022 /* TabbarViewController.swift */,
+				4269DA8C2B245EBA00B4771C /* LogoutViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
 				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
 				4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */,
+				4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */,
 				4269DA8A2B245BD500B4771C /* ArrayExtension.swift */,
 				42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */,
 				4269DA862B244D5000B4771C /* UIFontExtension.swift */,
@@ -433,9 +439,11 @@
 				42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */,
 				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
 				425235D82B1B30F600AD451F /* APIEndPoints.swift in Sources */,
+				4269DA8D2B245EBA00B4771C /* LogoutViewController.swift in Sources */,
 				4269DA892B2453B800B4771C /* Userdefaults.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
 				42A82FBE2B1E3BF000396255 /* Common.swift in Sources */,
+				4269DA8F2B245F3000B4771C /* UIApplication+UIWindowExtension.swift in Sources */,
 				42D30A5C2B15013B0096225F /* APITypes.swift in Sources */,
 				4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */,
 				42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */,

@@ -13,4 +13,5 @@ enum EndPoint: String {
     case verifyResetPassword = "verify-reset-password-code"
     case updatePassword = "update-password"
     case emergencyCodes = "ecg/codes"
+    case sendAlert = "ecg/alerts"
 }

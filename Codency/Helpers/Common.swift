@@ -77,6 +77,43 @@ final class Commons: NSObject {
         }
     }
     
+    static func showOptionsAlertAction(message: String,
+                                       negativeActionTitle: String,
+                                       positiveActionTitle: String,
+                                       negativeCompletionHandler: @escaping () -> Void,
+                                       positiveCompletionHandler: @escaping () -> Void) {
+        let alertController = UIAlertController(title: "Codency", message: message, preferredStyle: .alert)
+        
+        // Create the actions
+        alertController.addAction(UIAlertAction(title: negativeActionTitle, style: .cancel, handler: { action in
+            negativeCompletionHandler()
+        }))
+        
+        alertController.addAction(UIAlertAction(title: positiveActionTitle, style: .default, handler: { action in
+            positiveCompletionHandler()
+        }))
+      
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController?.present(alertController, animated: true, completion: nil)
+        } else {
+            UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     static func showError(controller: UIViewController, message: String) {
+    }
+    
+    static func goToHome() {
+        if let vc: TabbarViewController = UIStoryboard.initiate(storyboard: .main) {
+            UIApplication.shared.windows.first?.rootViewController = vc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+    }
+    
+    static func goToLogin() {
+        if let vc: LoginViewController = UIStoryboard.initiate(storyboard: .auth) {
+            UIApplication.shared.windows.first?.rootViewController = vc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
     }
 }

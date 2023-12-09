@@ -48,13 +48,29 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func sendEmergencyAlert(to code: Int) {
+        Task {
+            do {
+                Commons.showActivityIndicator()
+                try await APIHandler.shared.sendAlert(to: code)
+                print("Alert Created")
+                Commons.hideActivityIndicator()
+            } catch (let error) {
+                Commons.hideActivityIndicator()
+                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+            }
+        }
+    }
+    
     private func showAlert(item: EmergencyCode) {
-        let alert = UIAlertController(title: nil, message: "Are you sure you want to send a alert to the Manager?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "No, Cancel", style: UIAlertAction.Style.default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {  [weak self] _ in
+        Commons.showOptionsAlertAction(message: "Are you sure you want to send a alert to the Manager?",
+                                       negativeActionTitle: "No, Cancel",
+                                       positiveActionTitle: "Yes") {
+            //
+        } positiveCompletionHandler: { [weak self] in
             guard let `self` = self else { return }
-        }))
-        present(alert, animated: true, completion: nil)
+            self.sendEmergencyAlert(to: Int(item.code ?? "") ?? 0)
+        }
     }
 }
 
