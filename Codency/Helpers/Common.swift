@@ -101,8 +101,47 @@ final class Commons: NSObject {
     }
     
     static func showError(controller: UIViewController, message: String) {
+        let mainView = UIView()
+        mainView.backgroundColor = UIColor.appRed
+        mainView.cornerRadius = 8
+        let toastLabel = UILabel()
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = UIFont.GothamRegular?.withSize(15)
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.numberOfLines = 0
+        mainView.addSubview(toastLabel)
+        controller.view.addSubview(mainView)
+        
+        toastLabel.translatesAutoresizingMaskIntoConstraints = false
+        toastLabel.topAnchor.constraint(equalTo: mainView.topAnchor,
+                                        constant: 10).isActive = true
+        toastLabel.bottomAnchor.constraint(equalTo: mainView.bottomAnchor,
+                                        constant: -10).isActive = true
+        toastLabel.leadingAnchor.constraint(equalTo: mainView.leadingAnchor,
+                                        constant: 10).isActive = true
+        toastLabel.trailingAnchor.constraint(equalTo: mainView.trailingAnchor,
+                                        constant: 10).isActive = true
+        
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        mainView.topAnchor.constraint(equalTo: controller.view.topAnchor,
+                                        constant: Commons.getSafeAreaInsets().top + 20).isActive = true
+        mainView.leadingAnchor.constraint(equalTo: controller.view.leadingAnchor,
+                                        constant: 20).isActive = true
+        mainView.widthAnchor.constraint(equalToConstant: controller.view.frame.width - 40).isActive = true
+        
+        UIView.animate(withDuration: 1.0, delay: 2, options: .curveEaseOut, animations: {
+            mainView.alpha = 0.0
+        }, completion: {(isCompleted) in
+            mainView.removeFromSuperview()
+        })
     }
     
+    static func getSafeAreaInsets() -> UIEdgeInsets {
+        let window = UIApplication.shared.windows[0]
+        return window.safeAreaInsets
+    }
+
     static func goToHome() {
         if let vc: TabbarViewController = UIStoryboard.initiate(storyboard: .main) {
             UIApplication.shared.windows.first?.rootViewController = vc
