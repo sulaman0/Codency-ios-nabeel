@@ -76,4 +76,7 @@ final class Commons: NSObject {
             }
         }
     }
+    
+    static func showError(controller: UIViewController, message: String) {
+    }
 }

@@ -42,14 +42,14 @@ class VerifyCodeViewController: UIViewController {
                 self.email = email
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                print(error.localizedDescription)
+                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
             }
         }
     }
     
     @IBAction func didTapVerifyCode(_ sender: Any) {
         guard let code = codeTF.text, code.count == 6 else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Please Enter Valid Code")
             return
         }
         
@@ -63,7 +63,7 @@ class VerifyCodeViewController: UIViewController {
                 }
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                print(error.localizedDescription)
+                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
             }
         }
     }

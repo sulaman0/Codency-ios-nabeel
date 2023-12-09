@@ -15,7 +15,6 @@
 		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
 		42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */; };
 		42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */; };
-		424BA7B12B1259190005BD2E /* EmergencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B02B1259190005BD2E /* EmergencyCode.swift */; };
 		424BA7B32B125AF20005BD2E /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B22B125AF20005BD2E /* Staff.swift */; };
 		424BA7BA2B125CED0005BD2E /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */; };
 		424BA7BB2B125CED0005BD2E /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */; };
@@ -26,6 +25,9 @@
 		426650572B124D2600B48114 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426650562B124D2600B48114 /* FiltersViewController.swift */; };
 		4266505A2B12531000B48114 /* SelectFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426650582B12531000B48114 /* SelectFilterCollectionViewCell.swift */; };
 		4266505B2B12531000B48114 /* SelectFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426650592B12531000B48114 /* SelectFilterCollectionViewCell.xib */; };
+		4269DA872B244D5000B4771C /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA862B244D5000B4771C /* UIFontExtension.swift */; };
+		4269DA892B2453B800B4771C /* Userdefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA882B2453B800B4771C /* Userdefaults.swift */; };
+		4269DA8B2B245BD500B4771C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4269DA8A2B245BD500B4771C /* ArrayExtension.swift */; };
 		4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274A70B2B1242D1004C211C /* AlertsViewController.swift */; };
 		42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B592B0D155A0088CF64 /* AppDelegate.swift */; };
 		42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */; };
@@ -64,7 +66,6 @@
 		4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
-		424BA7B02B1259190005BD2E /* EmergencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCode.swift; sourceTree = "<group>"; };
 		424BA7B22B125AF20005BD2E /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -75,6 +76,9 @@
 		426650562B124D2600B48114 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		426650582B12531000B48114 /* SelectFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		426650592B12531000B48114 /* SelectFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectFilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		4269DA862B244D5000B4771C /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		4269DA882B2453B800B4771C /* Userdefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdefaults.swift; sourceTree = "<group>"; };
+		4269DA8A2B245BD500B4771C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		4274A70B2B1242D1004C211C /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		42A34B562B0D155A0088CF64 /* Codency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A34B592B0D155A0088CF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +141,6 @@
 		424BA7AD2B1258370005BD2E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				424BA7B02B1259190005BD2E /* EmergencyCode.swift */,
 				424BA7B22B125AF20005BD2E /* Staff.swift */,
 			);
 			path = Model;
@@ -263,6 +266,7 @@
 			children = (
 				42A34B802B0D1FC20088CF64 /* Extension */,
 				42A82FBD2B1E3BF000396255 /* Common.swift */,
+				4269DA882B2453B800B4771C /* Userdefaults.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -275,7 +279,9 @@
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
 				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
 				4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */,
+				4269DA8A2B245BD500B4771C /* ArrayExtension.swift */,
 				42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */,
+				4269DA862B244D5000B4771C /* UIFontExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -427,12 +433,14 @@
 				42A34B7E2B0D1F660088CF64 /* LoginViewController.swift in Sources */,
 				426650512B12497100B48114 /* AlertsTableViewCell.swift in Sources */,
 				425235D82B1B30F600AD451F /* APIEndPoints.swift in Sources */,
+				4269DA892B2453B800B4771C /* Userdefaults.swift in Sources */,
 				4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */,
 				42A82FBE2B1E3BF000396255 /* Common.swift in Sources */,
 				42D30A5C2B15013B0096225F /* APITypes.swift in Sources */,
 				4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */,
 				42D30A5E2B1502600096225F /* OptionalsExtension.swift in Sources */,
 				42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */,
+				4269DA8B2B245BD500B4771C /* ArrayExtension.swift in Sources */,
 				42A34B842B0D20050088CF64 /* NSObjectExtension.swift in Sources */,
 				42A4D3382B0FBD23005499FA /* HomeCollectionViewCell.swift in Sources */,
 				42A34B782B0D19BA0088CF64 /* SplashViewController.swift in Sources */,
@@ -448,8 +456,8 @@
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
 				424BA7B32B125AF20005BD2E /* Staff.swift in Sources */,
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
+				4269DA872B244D5000B4771C /* UIFontExtension.swift in Sources */,
 				42D83D772B12667D00A71E72 /* CodesAndStaffTableViewCell.swift in Sources */,
-				424BA7B12B1259190005BD2E /* EmergencyCode.swift in Sources */,
 				42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */,
 				426650572B124D2600B48114 /* FiltersViewController.swift in Sources */,
 				42A4D3352B0FBD0D005499FA /* HomeViewController.swift in Sources */,

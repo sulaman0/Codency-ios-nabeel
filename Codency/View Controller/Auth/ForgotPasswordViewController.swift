@@ -31,7 +31,7 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func didTapResetPassword(_ sender: Any) {
         guard let email = emailTF.text, email.isEmail else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Please Enter Valid Email")
             return
         }
         
@@ -43,7 +43,7 @@ class ForgotPasswordViewController: UIViewController {
                 goToVerifyCode(with: email)
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                print(error.localizedDescription)
+                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
             }
         }
     }

@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     //MARK:- Properties
     private var user: UserData? {
         didSet {
+            UserDefaultsConfig.user = user?.user
+            UserDefaultsConfig.token = user?.token
             goToHome()
         }
     }
@@ -48,12 +50,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLogin(_ sender: Any) {
         guard let email = emailTF.text, email.isEmail else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Please Enter Valid Email")
             return
         }
         
         guard let password = passwordTF.text, !password.isEmpty else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Please Enter Password")
             return
         }
         
@@ -65,7 +67,7 @@ class LoginViewController: UIViewController {
                 user = response?.payload
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                print(error.localizedDescription)
+                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
             }
         }
     }

@@ -10,6 +10,7 @@ import Foundation
 enum HttpMethod: String {
     case post = "POST"
     case put = "PUT"
+    case get = "GET"
 }
 
 class APIHandler {
@@ -28,7 +29,7 @@ class APIHandler {
      * queue.
      */
     func call<T: Codable>(_ path: String,
-                          _ argsFixed:[String: Any]!,
+                          _ argsFixed:[String: Any]? = nil,
                           headers: [String: String]? = nil,
                           method: HttpMethod = .post) async throws -> BaseResponse<T> {
         let url = URL(string: baseUrl + path)!
@@ -44,8 +45,12 @@ class APIHandler {
             apiHeaders += headers
         }
         request.allHTTPHeaderFields = apiHeaders
-        request.httpBody = try? JSONSerialization.data(withJSONObject: args,
-                                                      options: [])
+        if method == .get {
+            
+        } else {
+            request.httpBody = try? JSONSerialization.data(withJSONObject: args,
+                                                           options: [])
+        }
         
         print("API call(header): \(url)")
         print("API Call(Body): \(String(data: try! JSONSerialization.data(withJSONObject: args, options: .prettyPrinted), encoding: .utf8 )!)")
@@ -67,13 +72,18 @@ class APIHandler {
     }
     
     func getAPIHeaders() -> [String: String] {
-        [
+        var headers = [
             "Content-Type": "application/json",
             "Accept": "application/json",
             "http-x-lang": "en"
         ]
+        if UserDefaultsConfig.token.isSome {
+            headers["Authorization"] = "Bearer \(UserDefaultsConfig.token!)"
+        }
+        return headers
     }
     
+    //MARK:- Auth
     func login(with email: String, password: String) async throws -> BaseResponse<UserData>?  {
         return try await call(EndPoint.login.rawValue,
                               ["email": email,
@@ -100,6 +110,12 @@ class APIHandler {
                                "password_confirmation": confirmPassword],
                               headers: ["Authorization": "Bearer \(token)"],
                               method: .put)
+    }
+    
+    //MARK:- Home
+    func getEmergencyCodes() async throws -> BaseResponse<EmergencyCodeResponse>?  {
+        return try await call(EndPoint.emergencyCodes.rawValue,
+                              method: .get)
     }
 }
 

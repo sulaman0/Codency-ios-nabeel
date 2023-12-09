@@ -41,17 +41,17 @@ class UpdatePasswordViewController: UIViewController {
     
     @IBAction func didTapUpdatePassword(_ sender: Any) {
         guard let password = passwordTF.text, !password.isEmpty else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Please Enter Password")
             return
         }
         
         guard let confirmPassword = confirmPasswordTF.text, !confirmPassword.isEmpty else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Please Confirm Password")
             return
         }
         
         guard password == confirmPassword else {
-            // Show Error
+            Commons.showError(controller: self.navigationController ?? self, message: "Password and Confirm Password should be same")
             return
         }
         
@@ -65,7 +65,7 @@ class UpdatePasswordViewController: UIViewController {
                 navigationController?.popToRootViewController(animated: true)
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                print(error.localizedDescription)
+                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
             }
         }
     }
