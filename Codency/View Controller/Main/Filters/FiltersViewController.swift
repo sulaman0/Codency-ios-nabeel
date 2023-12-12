@@ -16,7 +16,12 @@ class FiltersViewController: UIViewController {
     private var emergencyCodeDataSource: EmergencyCodeDataSource?
     private var staffDataSource: StaffDataSource?
 
-    private var emergencyCodes = [EmergencyCode]()
+    private var emergencyCodes = [ECGCode]() {
+        didSet {
+            emergencyCodeDataSource?.configueCode(codes: emergencyCodes)
+            emergencyCodesCV.reloadData()
+        }
+    }
     private var staff = [Staff]()
     
     //MARK:- Life Cycle Methods
@@ -56,14 +61,24 @@ class FiltersViewController: UIViewController {
     }
 }
 
+extension FiltersViewController: EmergencyCodesViewControllerDelegate {
+    func didSelectCodes(codes: [ECGCode]) {
+        emergencyCodes = codes
+    }
+}
+
 final class EmergencyCodeDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    private let emergencyCodes: [EmergencyCode]?
+    private var emergencyCodes: [ECGCode]?
     private let context: UIViewController
     
-    init(codes: [EmergencyCode]?, context: UIViewController) {
+    init(codes: [ECGCode]?, context: UIViewController) {
         self.emergencyCodes = codes
         self.context = context
+    }
+    
+    func configueCode(codes: [ECGCode]) {
+        self.emergencyCodes = codes
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,7 +90,7 @@ final class EmergencyCodeDataSource: NSObject, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == 0 {
+        if emergencyCodes == nil && indexPath.item == 0 {
             return configureSelectCell(collectionView: collectionView, indexPath: indexPath)
         } else {
             return configureFilterCell(collectionView: collectionView, indexPath: indexPath)
@@ -86,6 +101,7 @@ final class EmergencyCodeDataSource: NSObject, UICollectionViewDelegate, UIColle
         if let vc: EmergencyCodesViewController = UIStoryboard.initiate(storyboard: .filters) {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
+            vc.delegate = context as? FiltersViewController
             context.present(vc, animated: true)
         }
     }
@@ -107,12 +123,16 @@ final class EmergencyCodeDataSource: NSObject, UICollectionViewDelegate, UIColle
 
 final class StaffDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    private let staff: [Staff]?
+    private var staff: [Staff]?
     private let context: UIViewController
 
     init(staff: [Staff]?, context: UIViewController) {
         self.staff = staff
         self.context = context
+    }
+    
+    func configueStaff(staff: [Staff]) {
+        self.staff = staff
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -124,7 +144,7 @@ final class StaffDataSource: NSObject, UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == 0 {
+        if staff == nil && indexPath.item == 0 {
             return configureSelectCell(collectionView: collectionView, indexPath: indexPath)
         } else {
             return configureFilterCell(collectionView: collectionView, indexPath: indexPath)

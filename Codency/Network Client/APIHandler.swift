@@ -148,6 +148,10 @@ class APIHandler {
                               ["action": action],
                               method: .put)
     }
+    func getFilterEmergencyCodes() async throws -> BaseResponse<FilterECodeResponse>?  {
+        return try await call(EndPoint.emergencyCodeList.rawValue,
+                              method: .get)
+    }
 }
 
 /**

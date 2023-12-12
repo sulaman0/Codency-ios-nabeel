@@ -96,3 +96,13 @@ struct GenericDetail: Codable {
     var name: String?
     var value: String?
 }
+
+struct FilterECodeResponse: Codable {
+    var data: [ECGCode]?
+    var meta: Meta?
+}
+struct ECGCode: Codable {
+    var id: Int?
+    var name: String?
+    var code: String?
+}
