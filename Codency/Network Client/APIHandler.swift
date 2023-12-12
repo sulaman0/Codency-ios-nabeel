@@ -31,9 +31,11 @@ class APIHandler {
     func call<T: Codable>(_ path: String,
                           _ argsFixed:[String: Any]? = nil,
                           headers: [String: String]? = nil,
-                          method: HttpMethod = .post) async throws -> BaseResponse<T> {
+                          method: HttpMethod = .post) async throws -> BaseResponse<T>? {
         let url = URL(string: baseUrl + path)!
         var args: [String: Any] = [:]
+        args["fcm_token"] = "abc"
+        args["device_type"] = "ios"
         if argsFixed != nil {
             args += argsFixed!
         }
@@ -57,17 +59,28 @@ class APIHandler {
         let (data, response) = try await session.data(for: request)
         
         guard let response  = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw APIError.unknown
+            throw APIError.serverError("Something Went wrong")
         }
         
-        do {
-            let responseObj = try self.decoder.decode(BaseResponse<T>.self, from: data)
-            print("API Call(Response): \(responseObj)")
-            return responseObj
-        }
-        catch {
-            print("Error handling response from API call '\(url)': \(error)")
-            throw APIError.parsingError
+        if let dict = data.toDictionary() {
+            let status = (dict["status"] as? Bool) ?? false
+            let message = (dict["message"] as? String) ?? ""
+            print("API Call(Response Dict): \(dict)")
+
+            if status == false {
+                throw APIError.serverError(message)
+            }
+            
+            do {
+                let responseObj = try self.decoder.decode(BaseResponse<T>.self, from: data)
+                print("API Call(Response): \(responseObj)")
+                return responseObj
+            } catch {
+                print("Error handling response from API call '\(url)': \(error.localizedDescription)")
+                throw APIError.serverError("Unable to parse data")
+            }
+        } else {
+            return nil
         }
     }
     
@@ -128,6 +141,12 @@ class APIHandler {
     func getAlarmAlerts() async throws -> BaseResponse<AlarmResponse>?  {
         return try await call(EndPoint.alert.rawValue,
                               method: .get)
+    }
+    @discardableResult
+    func respondAlert(with action: String, of id: String) async throws -> BaseResponse<EmptyResponse>?  {
+        return try await call(EndPoint.alert.rawValue + "/\(id)",
+                              ["action": action],
+                              method: .put)
     }
 }
 

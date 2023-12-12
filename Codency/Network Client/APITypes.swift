@@ -6,10 +6,8 @@
 //
 
 import Foundation
-enum APIError: String, Error {
-    case local = "0"
-    case unknown
-    case parsingError
+enum APIError: Error {
+    case serverError(String)
 }
 
 /* Response types. */

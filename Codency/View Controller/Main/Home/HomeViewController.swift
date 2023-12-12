@@ -52,7 +52,11 @@ class HomeViewController: UIViewController {
                 Commons.hideActivityIndicator()
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
     }
@@ -66,7 +70,11 @@ class HomeViewController: UIViewController {
                 Commons.hideActivityIndicator()
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
     }

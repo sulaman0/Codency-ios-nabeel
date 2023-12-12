@@ -144,14 +144,18 @@ final class Commons: NSObject {
 
     static func goToHome() {
         if let vc: TabbarViewController = UIStoryboard.initiate(storyboard: .main) {
-            UIApplication.shared.windows.first?.rootViewController = vc
+            let navVC = UINavigationController(rootViewController: vc)
+            navVC.setNavigationBarHidden(true, animated: true)
+            UIApplication.shared.windows.first?.rootViewController = navVC
             UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
     }
     
     static func goToLogin() {
         if let vc: LoginViewController = UIStoryboard.initiate(storyboard: .auth) {
-            UIApplication.shared.windows.first?.rootViewController = vc
+            let navVC = UINavigationController(rootViewController: vc)
+            navVC.setNavigationBarHidden(true, animated: true)
+            UIApplication.shared.windows.first?.rootViewController = navVC
             UIApplication.shared.windows.first?.makeKeyAndVisible()
         }
     }

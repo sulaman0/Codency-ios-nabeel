@@ -21,7 +21,16 @@ class UpdatePasswordViewController: UIViewController {
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        configureTextFields()
+    }
+    
+    private func configureTextFields() {
+        passwordTF.delegate = self
+        passwordTF.returnKeyType = .next
+        
+        confirmPasswordTF.delegate = self
+        confirmPasswordTF.returnKeyType = .done
     }
     
     //MARK:- UI Actions
@@ -65,8 +74,24 @@ class UpdatePasswordViewController: UIViewController {
                 navigationController?.popToRootViewController(animated: true)
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
+    }
+}
+
+extension UpdatePasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == passwordTF {
+            confirmPasswordTF.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

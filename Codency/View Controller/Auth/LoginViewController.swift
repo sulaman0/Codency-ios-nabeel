@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     @IBOutlet weak var passwordEyeButton: UIButton!
-
+    
     //MARK:- Properties
     private var user: UserData? {
         didSet {
@@ -26,7 +26,16 @@ class LoginViewController: UIViewController {
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        configureTextFields()
+    }
+    
+    private func configureTextFields() {
+        emailTF.delegate = self
+        emailTF.returnKeyType = .next
+        
+        passwordTF.delegate = self
+        passwordTF.returnKeyType = .done
     }
     
     private func goToHome() {
@@ -67,8 +76,25 @@ class LoginViewController: UIViewController {
                 user = response?.payload
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self,
+                                      message: message)
+                }
             }
         }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

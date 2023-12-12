@@ -67,8 +67,33 @@ class AlertsViewController: UIViewController {
             } catch (let error) {
                 Commons.hideActivityIndicator()
                 alertTableView.stopRefresher()
-                Commons.showError(controller: self.navigationController ?? self,
-                                  message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
+            }
+        }
+    }
+    
+    private func respondAlert(with action: String, of id: String) {
+        Task {
+            do {
+                    Commons.showActivityIndicator()
+                try await APIHandler.shared.respondAlert(with: action, of: id)
+                Commons.hideActivityIndicator()
+                if let index = emergencyAlertsRes?.data?.firstIndex(where: { $0.id == Int(id)}) {
+                    emergencyAlertsRes?.data?[index].should_show_action_btn = false
+                }
+                alertTableView.reloadData()
+            } catch (let error) {
+                Commons.hideActivityIndicator()
+                alertTableView.stopRefresher()
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
     }
@@ -115,6 +140,7 @@ extension AlertsViewController: AlertsTableViewCellProtocol {
             // Do Nothing
         } positiveCompletionHandler: {
             // Respond
+            self.respondAlert(with: "reject", of: item.id?.toString() ?? "")
         }
     }
     
@@ -125,6 +151,7 @@ extension AlertsViewController: AlertsTableViewCellProtocol {
             // Do Nothing
         } positiveCompletionHandler: {
             // Respond
+            self.respondAlert(with: "accept", of: item.id?.toString() ?? "")
         }
     }
 }

@@ -10,6 +10,7 @@
 		4202BC842B0E7C020057B022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4202BC832B0E7C020057B022 /* Main.storyboard */; };
 		4202BC872B0E7C560057B022 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4202BC862B0E7C560057B022 /* TabbarViewController.swift */; };
 		4228B14F2B1B1A3400B5CC41 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */; };
+		422E73872B2630FA0095B5AE /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E73862B2630FA0095B5AE /* DataExtension.swift */; };
 		42472AD82B0D2CE100DB340F /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B912B0D29590088CF64 /* Gotham-Bold.otf */; };
 		42472AD92B0D2CF500DB340F /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B952B0D29590088CF64 /* Gotham-Book.otf */; };
 		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
@@ -51,6 +52,7 @@
 		42A82FBE2B1E3BF000396255 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A82FBD2B1E3BF000396255 /* Common.swift */; };
 		42A82FC02B1E3FF600396255 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */; };
 		42A82FC22B1E441200396255 /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 42A82FC12B1E441200396255 /* Loader.json */; };
+		42A997C72B28D4FA00C935D5 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A997C62B28D4FA00C935D5 /* IntExtension.swift */; };
 		42BBEBE82B0E74B2006A33AB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */; };
 		42BBEBEB2B0E7540006A33AB /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */; };
 		42BBEBED2B0E7708006A33AB /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */; };
@@ -67,6 +69,7 @@
 		4202BC832B0E7C020057B022 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4202BC862B0E7C560057B022 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		422E73862B2630FA0095B5AE /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		424BA7B22B125AF20005BD2E /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		42A82FBD2B1E3BF000396255 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		42A82FBF2B1E3FF600396255 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		42A82FC12B1E441200396255 /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
+		42A997C62B28D4FA00C935D5 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		42BBEBE72B0E74B2006A33AB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		42BBEBEA2B0E7540006A33AB /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		42BBEBEC2B0E7708006A33AB /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */,
 				42D30A5D2B1502600096225F /* OptionalsExtension.swift */,
 				4228B14E2B1B1A3400B5CC41 /* StringExtension.swift */,
+				42A997C62B28D4FA00C935D5 /* IntExtension.swift */,
+				422E73862B2630FA0095B5AE /* DataExtension.swift */,
 				4269DA902B246FEC00B4771C /* ScrollViewExtension.swift */,
 				4269DA8E2B245F3000B4771C /* UIApplication+UIWindowExtension.swift */,
 				4269DA8A2B245BD500B4771C /* ArrayExtension.swift */,
@@ -463,6 +469,7 @@
 				42A82FC02B1E3FF600396255 /* UIColorExtension.swift in Sources */,
 				42A34B5A2B0D155A0088CF64 /* AppDelegate.swift in Sources */,
 				42D83D742B12639A00A71E72 /* EmergencyCodesViewController.swift in Sources */,
+				422E73872B2630FA0095B5AE /* DataExtension.swift in Sources */,
 				4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */,
 				42D30A572B14FE330096225F /* APIHandler.swift in Sources */,
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
@@ -470,6 +477,7 @@
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
 				4269DA872B244D5000B4771C /* UIFontExtension.swift in Sources */,
 				42D83D772B12667D00A71E72 /* CodesAndStaffTableViewCell.swift in Sources */,
+				42A997C72B28D4FA00C935D5 /* IntExtension.swift in Sources */,
 				42A34B5C2B0D155A0088CF64 /* SceneDelegate.swift in Sources */,
 				426650572B124D2600B48114 /* FiltersViewController.swift in Sources */,
 				42A4D3352B0FBD0D005499FA /* HomeViewController.swift in Sources */,

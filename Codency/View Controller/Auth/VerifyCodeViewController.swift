@@ -18,7 +18,12 @@ class VerifyCodeViewController: UIViewController {
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureTextFields()
+    }
+    
+    private func configureTextFields() {
+        codeTF.delegate = self
+        codeTF.returnKeyType = .done
     }
     
     private func goToUpdatePassword(with token: String) {
@@ -42,7 +47,11 @@ class VerifyCodeViewController: UIViewController {
                 self.email = email
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
     }
@@ -63,8 +72,20 @@ class VerifyCodeViewController: UIViewController {
                 }
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
+    }
+}
+
+extension VerifyCodeViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 }

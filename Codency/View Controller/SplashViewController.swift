@@ -35,15 +35,10 @@ class SplashViewController: UIViewController {
             guard let _ = self else { return }
             
             if isCompleted {
-                if false {
-                    
+                if UserDefaultsConfig.user.isSome {
+                    Commons.goToHome()
                 } else {
-                    if let vc: LoginViewController = UIStoryboard.initiate(storyboard: .auth) {
-                        let navVC = UINavigationController(rootViewController: vc)
-                        navVC.setNavigationBarHidden(true, animated: true)
-                        UIApplication.shared.windows.first?.rootViewController = navVC
-                        UIApplication.shared.windows.first?.makeKeyAndVisible()
-                    }
+                    Commons.goToLogin()
                 }
             }
         }

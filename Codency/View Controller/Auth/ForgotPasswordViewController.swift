@@ -15,6 +15,12 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureTextFields()
+    }
+    
+    private func configureTextFields() {
+        emailTF.delegate = self
+        emailTF.returnKeyType = .done
     }
     
     private func goToVerifyCode(with email: String) {
@@ -43,8 +49,20 @@ class ForgotPasswordViewController: UIViewController {
                 goToVerifyCode(with: email)
             } catch (let error) {
                 Commons.hideActivityIndicator()
-                Commons.showError(controller: self.navigationController ?? self, message: error.localizedDescription)
+                guard let error = error as? APIError else { return }
+                switch error {
+                case .serverError(let message):
+                    Commons.showError(controller: self.navigationController ?? self, message: message)
+                }
             }
         }
+    }
+}
+
+extension ForgotPasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 }
