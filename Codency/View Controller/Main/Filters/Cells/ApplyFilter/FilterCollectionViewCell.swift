@@ -8,6 +8,8 @@
 import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
+    //MARK:- Outlets
+    @IBOutlet weak var nameLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,4 +15,5 @@ enum EndPoint: String {
     case emergencyCodes = "ecg/codes"
     case alert = "ecg/alerts"
     case emergencyCodeList = "ecg-codes-list"
+    case users = "users-list"
 }

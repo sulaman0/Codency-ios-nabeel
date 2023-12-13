@@ -22,8 +22,12 @@ class FiltersViewController: UIViewController {
             emergencyCodesCV.reloadData()
         }
     }
-    private var staff = [Staff]()
-    
+    private var staff = [ECGCode]() {
+        didSet {
+            staffDataSource?.configueStaff(staff: staff)
+            staffCV.reloadData()
+        }
+    }
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +68,10 @@ class FiltersViewController: UIViewController {
 extension FiltersViewController: EmergencyCodesViewControllerDelegate {
     func didSelectCodes(codes: [ECGCode]) {
         emergencyCodes = codes
+    }
+    
+    func didSelectStaff(staff: [ECGCode]) {
+        self.staff = staff
     }
 }
 
@@ -117,21 +125,23 @@ final class EmergencyCodeDataSource: NSObject, UICollectionViewDelegate, UIColle
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.className, for: indexPath) as? FilterCollectionViewCell else {
             return FilterCollectionViewCell()
         }
+        let item = emergencyCodes?[indexPath.row]
+        cell.nameLbl.text = (item?.code ?? "") + " " + (item?.name ?? "")
         return cell
     }
 }
 
 final class StaffDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    private var staff: [Staff]?
+    private var staff: [ECGCode]?
     private let context: UIViewController
 
-    init(staff: [Staff]?, context: UIViewController) {
+    init(staff: [ECGCode]?, context: UIViewController) {
         self.staff = staff
         self.context = context
     }
     
-    func configueStaff(staff: [Staff]) {
+    func configueStaff(staff: [ECGCode]) {
         self.staff = staff
     }
     
@@ -162,6 +172,8 @@ final class StaffDataSource: NSObject, UICollectionViewDelegate, UICollectionVie
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.className, for: indexPath) as? FilterCollectionViewCell else {
             return FilterCollectionViewCell()
         }
+        let item = staff?[indexPath.row]
+        cell.nameLbl.text = item?.name
         return cell
     }
     
@@ -169,6 +181,7 @@ final class StaffDataSource: NSObject, UICollectionViewDelegate, UICollectionVie
         if let vc: StaffViewController = UIStoryboard.initiate(storyboard: .filters) {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
+            vc.delegate = context as? FiltersViewController
             context.present(vc, animated: true)
         }
     }

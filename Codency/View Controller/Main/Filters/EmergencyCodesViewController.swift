@@ -9,6 +9,7 @@ import UIKit
 
 protocol EmergencyCodesViewControllerDelegate: AnyObject {
     func didSelectCodes(codes: [ECGCode])
+    func didSelectStaff(staff: [ECGCode])
 }
 
 class EmergencyCodesViewController: UIViewController {

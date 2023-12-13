@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapEyeIcon(_ sender: Any) {
         passwordTF.isSecureTextEntry.toggle()
-        passwordTF.isSecureTextEntry ? passwordEyeButton.setImage(UIImage(named: "EyeIcon"), for: .normal) : passwordEyeButton.setImage(UIImage(named: "Back"), for: .normal)
+        passwordTF.isSecureTextEntry ? passwordEyeButton.setImage(UIImage(named: "EyeIcon"), for: .normal) : passwordEyeButton.setImage(UIImage(named: "EyeClose"), for: .normal)
     }
     
     @IBAction func didTapLogin(_ sender: Any) {

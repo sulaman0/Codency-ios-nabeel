@@ -152,6 +152,10 @@ class APIHandler {
         return try await call(EndPoint.emergencyCodeList.rawValue,
                               method: .get)
     }
+    func getStaffForFilters() async throws -> BaseResponse<FilterECodeResponse>?  {
+        return try await call(EndPoint.users.rawValue,
+                              method: .get)
+    }
 }
 
 /**

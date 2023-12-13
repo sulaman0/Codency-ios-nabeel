@@ -16,7 +16,6 @@
 		42472ADA2B0D2CF500DB340F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42A34B8C2B0D29590088CF64 /* Gotham-Medium.otf */; };
 		42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */; };
 		42472ADE2B0D2EEF00DB340F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */; };
-		424BA7B32B125AF20005BD2E /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B22B125AF20005BD2E /* Staff.swift */; };
 		424BA7BA2B125CED0005BD2E /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */; };
 		424BA7BB2B125CED0005BD2E /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */; };
 		425235D82B1B30F600AD451F /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425235D72B1B30F600AD451F /* APIEndPoints.swift */; };
@@ -72,7 +71,6 @@
 		422E73862B2630FA0095B5AE /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		42472ADB2B0D2E7C00DB340F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		42472ADD2B0D2EEF00DB340F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
-		424BA7B22B125AF20005BD2E /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		424BA7B82B125CED0005BD2E /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		424BA7B92B125CED0005BD2E /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		425235D72B1B30F600AD451F /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
@@ -149,14 +147,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		424BA7AD2B1258370005BD2E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				424BA7B22B125AF20005BD2E /* Staff.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		424BA7B42B125C4F0005BD2E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				42D30A552B14FE180096225F /* Network Client */,
-				424BA7AD2B1258370005BD2E /* Model */,
 				42A34B7F2B0D1FBA0088CF64 /* Helpers */,
 				42A34B592B0D155A0088CF64 /* AppDelegate.swift */,
 				42A34B5B2B0D155A0088CF64 /* SceneDelegate.swift */,
@@ -473,7 +462,6 @@
 				4274A70C2B1242D1004C211C /* AlertsViewController.swift in Sources */,
 				42D30A572B14FE330096225F /* APIHandler.swift in Sources */,
 				42472ADC2B0D2E7C00DB340F /* UIViewExtension.swift in Sources */,
-				424BA7B32B125AF20005BD2E /* Staff.swift in Sources */,
 				42A34B822B0D1FD80088CF64 /* StoryboardExtension.swift in Sources */,
 				4269DA872B244D5000B4771C /* UIFontExtension.swift in Sources */,
 				42D83D772B12667D00A71E72 /* CodesAndStaffTableViewCell.swift in Sources */,

@@ -70,6 +70,9 @@
                 <constraint firstAttribute="trailing" secondItem="EGA-Fv-eK3" secondAttribute="trailing" constant="10" id="v7a-1k-bka"/>
             </constraints>
             <size key="customSize" width="297" height="50"/>
+            <connections>
+                <outlet property="nameLbl" destination="lCd-Af-JnB" id="Csa-b5-j31"/>
+            </connections>
             <point key="canvasLocation" x="251.14503816793894" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>

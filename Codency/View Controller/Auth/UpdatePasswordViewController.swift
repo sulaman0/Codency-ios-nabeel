@@ -40,12 +40,12 @@ class UpdatePasswordViewController: UIViewController {
     
     @IBAction func didTapPasswordIcon(_ sender: Any) {
         passwordTF.isSecureTextEntry.toggle()
-        passwordTF.isSecureTextEntry ? passwordEyeIcon.setImage(UIImage(named: "EyeIcon"), for: .normal) : passwordEyeIcon.setImage(UIImage(named: "Back"), for: .normal)
+        passwordTF.isSecureTextEntry ? passwordEyeIcon.setImage(UIImage(named: "EyeIcon"), for: .normal) : passwordEyeIcon.setImage(UIImage(named: "EyeClose"), for: .normal)
     }
     
     @IBAction func didTapConfirmPasswordIcon(_ sender: Any) {
         confirmPasswordTF.isSecureTextEntry.toggle()
-        confirmPasswordTF.isSecureTextEntry ? confirmPasswordEyeIcon.setImage(UIImage(named: "EyeIcon"), for: .normal) : confirmPasswordEyeIcon.setImage(UIImage(named: "Back"), for: .normal)
+        confirmPasswordTF.isSecureTextEntry ? confirmPasswordEyeIcon.setImage(UIImage(named: "EyeIcon"), for: .normal) : confirmPasswordEyeIcon.setImage(UIImage(named: "EyeClose"), for: .normal)
     }
     
     @IBAction func didTapUpdatePassword(_ sender: Any) {
